@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"module": "system",
+		"target": "es5",
+		"declaration": false,
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"downlevelIteration": true,
+		"sourceMap": true,
+		"allowJs": true,
+		"outFile": "bin/sdk.js",
+		"lib": [
+			"dom",
+			"es6",
+			"es7"
+		]
+	},
+	"files": [
+		"typings/channel.d.ts",
+		"typings/proxy.d.ts",
+		"../axios/bin/axios.d.ts",
+		"../promise/bin/promise.d.ts",
+		"../promise/bin/promise.js",
+		"../lp/typings/jquery.d.ts",
+		"../lp/bin/lp.d.ts",
+	],
+	"include": [
+		"src"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
