@@ -48,11 +48,17 @@ namespace PM {
 							resolve(v);
 						},
 						error(error: any, message: string) {
-							reject({error, message});
+							if (typeof error == 'object') {
+								//if (error instanceof LP.Exception || typeof error['exceptionType'] != 'undefined' || error instanceof Error || typeof error['stack'] != 'undefined')
+								reject(new LP.Exception(error));
+							} else if (typeof error == 'string')
+								reject(new LP.Exception(error, message));
+							else
+								reject({error, message});
 						}
 					});
 				} catch (e){
-					reject(e);
+					reject(new LP.Exception(e));
 				}
 			});
 		}

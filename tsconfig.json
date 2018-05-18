@@ -23,8 +23,10 @@
 		"../axios/bin/axios.d.ts",
 		"../promise/bin/promise.d.ts",
 		"../promise/bin/promise.js",
-		"../lp/typings/jquery.d.ts",
-		"../lp/bin/lp.d.ts",
+		"../lp/src/response/message.ts",
+		"../lp/src/response/exception.ts",
+		"../lp/typings/jquery.d.ts"
+
 	],
 	"include": [
 		"src"
